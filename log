@@ -603,3 +603,13 @@ Fri Apr  8 16:27:36 UTC 2022:
  tests:  1|5
 total_score: 10/70
 1418742
+Fri Apr  8 16:27:59 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:55:42: error: expected statement before ‘)’ token
+   if(map->size >= (70*map->capacity)/100))
+                                          ^
+Compilation failed
+49f02c2
