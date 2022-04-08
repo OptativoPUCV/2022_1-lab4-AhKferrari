@@ -49,7 +49,7 @@ if(!mapa->buckets[pos]){
     aux = pos;
     pos = (pos+1)% map->capacity;
     if((70*mapa->capacity)/100)
-      mapa->buckets = malloc(sizeof(capacity)* 2);
+      mapa->buckets = malloc(sizeof(mapa->capacity)* 2);
     
     
   }
