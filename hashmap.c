@@ -42,7 +42,6 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) {
 
 int pos;
-int aux;
 pos = hash(key);
 if(!mapa->buckets[pos]){
   while(mapa->buckets[pos]){
@@ -50,7 +49,6 @@ if(!mapa->buckets[pos]){
     pos = (pos+1)% map->capacity;
     if((70*mapa->capacity)/100)
       mapa->buckets = malloc(sizeof(mapa->capacity)* 2);
-    
     
   }
   }
