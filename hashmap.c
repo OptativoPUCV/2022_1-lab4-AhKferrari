@@ -52,8 +52,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   map->size++;
   map->current = pos;
 
-  if(map->size >= ((70*map->capacity)/100))
-      enlarge (map);
+
 }
 
 void enlarge(HashMap * map) {
