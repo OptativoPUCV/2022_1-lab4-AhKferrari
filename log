@@ -613,3 +613,9 @@ hashmap.c:55:42: error: expected statement before ‘)’ token
                                           ^
 Compilation failed
 49f02c2
+Fri Apr  8 16:28:13 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+cd339be
