@@ -60,8 +60,8 @@ HashMap * createMap(long capacity) {
   for(i=0 ; i<capacity ; i++)
   mapa->buckets[i] = NULL;
   mapa->capacity = capacity;
-  
-  
+  mapa->current = -1;
+  return HashMap;
   }
 
 void eraseMap(HashMap * map,  char * key) {    
