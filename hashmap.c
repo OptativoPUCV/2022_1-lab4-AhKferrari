@@ -52,12 +52,12 @@ if(!mapa->buckets[pos]){
     
   }
   }
-else
+else{
   mapa->buckets[pos] = key;
   mapa->buckets[pos] = value;
   mapa->size++;
   mapa->current = mapa->buckets[pos];
-  
+  }
 }
 
 void enlarge(HashMap * map) {
