@@ -62,7 +62,7 @@ HashMap * createMap(long capacity) {
   mapa->buckets[i] = NULL;
   mapa->capacity = capacity;
   mapa->current = -1;
-  return HashMap;
+  return mapa;
   }
 
 void eraseMap(HashMap * map,  char * key) {    
