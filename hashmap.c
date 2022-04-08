@@ -44,7 +44,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   int pos;
 
   pos = hash(key);
-  while(mapa->buckets[pos] || ){
+  while(map->buckets[pos] || ){
     pos = (pos+1)% map->capacity;
   }  
   
@@ -52,10 +52,10 @@ void insertMap(HashMap * map, char * key, void * value) {
   map->bucket[pos] = createpair (key,value);  
   }
   
-  mapa->buckets[pos] = key;
-  mapa->buckets[pos] = value;
-  mapa->size++;
-  mapa->current = mapa->buckets[pos];
+  map->buckets[pos] = key;
+  map->buckets[pos] = value;
+  map->size++;
+  map->current = map->buckets[pos];
 
   if((70*mapa->capacity)/100)
       enlarge (map);
