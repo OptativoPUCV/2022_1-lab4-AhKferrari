@@ -71,3 +71,17 @@ hashmap.c:66:3: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 fff7d38
+Fri Apr  8 15:25:23 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:65:10: error: expected expression before ‘HashMap’
+   return HashMap;
+          ^~~~~~~
+hashmap.c:66:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1: all warnings being treated as errors
+Compilation failed
+edf76ff
