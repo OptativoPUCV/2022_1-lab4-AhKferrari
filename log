@@ -111,3 +111,20 @@ hashmap.c:44:5: error: variable ‘indice’ set but not used [-Werror=unused-bu
 cc1: all warnings being treated as errors
 Compilation failed
 324d568
+Fri Apr  8 15:35:59 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:45:10: error: too few arguments to function ‘hash’
+ indice = hash(key);
+          ^~~~
+hashmap.c:26:6: note: declared here
+ long hash( char * key, long capacity) {
+      ^~~~
+hashmap.c:44:5: error: variable ‘indice’ set but not used [-Werror=unused-but-set-variable]
+ int indice;
+     ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6149a35
