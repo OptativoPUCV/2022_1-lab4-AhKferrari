@@ -264,3 +264,52 @@ hashmap.c:48:5: error: ‘aux’ undeclared (first use in this function)
      ^~~
 Compilation failed
 7b436c4
+Fri Apr  8 16:05:15 UTC 2022: 
+ hashmap.c | 17 +++++++++--------
+ 1 file changed, 9 insertions(+), 8 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:9: error: too few arguments to function ‘hash’
+   pos = hash(key);
+         ^~~~
+hashmap.c:26:6: note: declared here
+ long hash( char * key, long capacity) {
+      ^~~~
+hashmap.c:47:9: error: ‘mapa’ undeclared (first use in this function); did you mean ‘map’?
+   while(mapa->buckets[pos] || ){
+         ^~~~
+         map
+hashmap.c:47:9: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:47:31: error: expected expression before ‘)’ token
+   while(mapa->buckets[pos] || ){
+                               ^
+hashmap.c:52:8: error: ‘HashMap {aka struct HashMap}’ has no member named ‘bucket’; did you mean ‘buckets’?
+   map->bucket[pos] = createpair (key,value);
+        ^~~~~~
+        buckets
+hashmap.c:52:22: error: implicit declaration of function ‘createpair’; did you mean ‘createPair’? [-Werror=implicit-function-declaration]
+   map->bucket[pos] = createpair (key,value);
+                      ^~~~~~~~~~
+                      createPair
+hashmap.c: At top level:
+hashmap.c:55:7: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   mapa->buckets[pos] = key;
+       ^~
+hashmap.c:56:7: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   mapa->buckets[pos] = value;
+       ^~
+hashmap.c:57:7: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   mapa->size++;
+       ^~
+hashmap.c:58:7: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   mapa->current = mapa->buckets[pos];
+       ^~
+hashmap.c:60:3: error: expected identifier or ‘(’ before ‘if’
+   if((70*mapa->capacity)/100)
+   ^~
+hashmap.c:62:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+a8dee02

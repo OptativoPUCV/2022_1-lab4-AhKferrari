@@ -41,23 +41,24 @@ int is_equal(void* key1, void* key2){
 
 void insertMap(HashMap * map, char * key, void * value) {
 
-int pos;
-pos = hash(key);
-if(!mapa->buckets[pos]){
-  while(mapa->buckets[pos]){
-    aux = pos;
+  int pos;
+
+  pos = hash(key);
+  while(mapa->buckets[pos] || ){
     pos = (pos+1)% map->capacity;
-    if((70*mapa->capacity)/100)
-      mapa->buckets = malloc(sizeof(mapa->capacity)* 2);
-    
+  }  
+  
+  
+  map->bucket[pos] = createpair (key,value);  
   }
-  }
-else{
+  
   mapa->buckets[pos] = key;
   mapa->buckets[pos] = value;
   mapa->size++;
   mapa->current = mapa->buckets[pos];
-  }
+
+  if((70*mapa->capacity)/100)
+      enlarge (map);
 }
 
 void enlarge(HashMap * map) {
