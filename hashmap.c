@@ -48,8 +48,9 @@ if(!mapa->buckets[pos]){
   while(mapa->buckets[pos]){
     aux = pos;
     pos = (pos+1)% map->capacity;
-    if (pos == aux)
-      printf ("el mapa esta lleno");
+    if((70*mapa->capacity)/100)
+      mapa->buckets = malloc(sizeof(capacity)* 2);
+    
     
   }
   }
@@ -57,7 +58,7 @@ else
   mapa->buckets[pos] = key;
   mapa->buckets[pos] = value;
   mapa->size++;
-  mapa->current = mapa->buckets[pos]
+  mapa->current = mapa->buckets[pos];
   
 }
 
