@@ -128,3 +128,31 @@ hashmap.c:44:5: error: variable ‘indice’ set but not used [-Werror=unused-bu
 cc1: all warnings being treated as errors
 Compilation failed
 6149a35
+Fri Apr  8 15:52:36 UTC 2022: 
+ hashmap.c | 19 +++++++++++++++++--
+ 1 file changed, 17 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:7: error: too few arguments to function ‘hash’
+ pos = hash(key);
+       ^~~~
+hashmap.c:26:6: note: declared here
+ long hash( char * key, long capacity) {
+      ^~~~
+hashmap.c:47:5: error: ‘mapa’ undeclared (first use in this function); did you mean ‘map’?
+ if(!mapa->buckets[pos]){
+     ^~~~
+     map
+hashmap.c:47:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:56:1: error: this ‘else’ clause does not guard... [-Werror=misleading-indentation]
+ else
+ ^~~~
+hashmap.c:58:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+   mapa->buckets[pos] = value;
+   ^~~~
+hashmap.c:62:1: error: expected ‘;’ before ‘}’ token
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+405e402

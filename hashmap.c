@@ -41,8 +41,23 @@ int is_equal(void* key1, void* key2){
 
 void insertMap(HashMap * map, char * key, void * value) {
 
-int indice;
-indice = hash(key);
+int pos;
+int aux;
+pos = hash(key);
+if(!mapa->buckets[pos]){
+  while(mapa->buckets[pos]){
+    aux = pos;
+    pos = (pos+1)% map->capacity;
+    if (pos == aux)
+      printf ("el mapa esta lleno");
+    
+  }
+  }
+else
+  mapa->buckets[pos] = key;
+  mapa->buckets[pos] = value;
+  mapa->size++;
+  mapa->current = mapa->buckets[pos]
   
 }
 
