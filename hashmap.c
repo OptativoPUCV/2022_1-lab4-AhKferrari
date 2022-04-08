@@ -49,7 +49,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   }  
   
   
-  map->bucket[pos] = createpair (key,value);  
+  map->buckets[pos] = createpair (key,value);  
   }
   
   map->buckets[pos] = key;

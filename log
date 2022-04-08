@@ -357,3 +357,46 @@ hashmap.c:62:1: error: expected identifier or ‘(’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 04f3281
+Fri Apr  8 16:06:02 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:9: error: too few arguments to function ‘hash’
+   pos = hash(key);
+         ^~~~
+hashmap.c:26:6: note: declared here
+ long hash( char * key, long capacity) {
+      ^~~~
+hashmap.c:47:30: error: expected expression before ‘)’ token
+   while(map->buckets[pos] || ){
+                              ^
+hashmap.c:52:23: error: implicit declaration of function ‘createpair’; did you mean ‘createPair’? [-Werror=implicit-function-declaration]
+   map->buckets[pos] = createpair (key,value);
+                       ^~~~~~~~~~
+                       createPair
+hashmap.c:52:21: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+   map->buckets[pos] = createpair (key,value);
+                     ^
+hashmap.c: At top level:
+hashmap.c:55:6: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   map->buckets[pos] = key;
+      ^~
+hashmap.c:56:6: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   map->buckets[pos] = value;
+      ^~
+hashmap.c:57:6: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   map->size++;
+      ^~
+hashmap.c:58:6: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   map->current = map->buckets[pos];
+      ^~
+hashmap.c:60:3: error: expected identifier or ‘(’ before ‘if’
+   if((70*mapa->capacity)/100)
+   ^~
+hashmap.c:62:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+aa33db8
