@@ -2,3 +2,21 @@ Fri Apr  8 01:36:25 UTC 2022:
  tests:  0|6
 total_score: 0/70
 ffb95e0
+Fri Apr  8 15:22:34 UTC 2022: 
+ hashmap.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:60:7: error: ‘i’ undeclared (first use in this function)
+   for(i=0 ; i<capacity ; i++)
+       ^
+hashmap.c:60:7: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:61:8: error: ‘buckets’ undeclared (first use in this function)
+   mapa-buckets[i] = NULL;
+        ^~~~~~~
+hashmap.c:65:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1: all warnings being treated as errors
+Compilation failed
+acb8e05
