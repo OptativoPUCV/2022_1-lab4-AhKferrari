@@ -57,7 +57,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   map->size++;
   map->current = map->buckets[pos];
 
-  if((70*mapa->capacity)/100)
+  if((70*map->capacity)/100)
       enlarge (map);
 }
 
