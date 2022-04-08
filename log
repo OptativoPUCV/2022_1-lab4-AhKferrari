@@ -576,3 +576,18 @@ hashmap.c:50:21: error: assignment makes pointer from integer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 615d9dd
+Fri Apr  8 16:26:04 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:50:23: error: implicit declaration of function ‘createpair’; did you mean ‘createPair’? [-Werror=implicit-function-declaration]
+   map->buckets[pos] = createpair (key,value);
+                       ^~~~~~~~~~
+                       createPair
+hashmap.c:50:21: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+   map->buckets[pos] = createpair (key,value);
+                     ^
+cc1: all warnings being treated as errors
+Compilation failed
+244ec45
