@@ -20,3 +20,18 @@ hashmap.c:65:3: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 acb8e05
+Fri Apr  8 15:22:41 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:60:7: error: ‘i’ undeclared (first use in this function)
+   for(i=0 ; i<capacity ; i++)
+       ^
+hashmap.c:60:7: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:65:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1: all warnings being treated as errors
+Compilation failed
+79b41ee
