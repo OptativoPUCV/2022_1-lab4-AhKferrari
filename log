@@ -1018,3 +1018,13 @@ hashmap.c:100:5: error: expected expression before ‘}’ token
      ^
 Compilation failed
 2aade1c
+Sun Apr 10 21:07:00 UTC 2022: 
+ hashmap.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:97:5: error: break statement not within loop or switch
+     break;
+     ^~~~~
+Compilation failed
+99b6b53
