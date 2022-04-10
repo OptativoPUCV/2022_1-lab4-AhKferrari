@@ -129,9 +129,5 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
 
-  int pos;
-  pos = map->current+1;
-  
-  
-  return map->buckets[pos];
+return NULL;
 }
