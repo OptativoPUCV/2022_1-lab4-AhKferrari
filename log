@@ -1008,3 +1008,13 @@ hashmap.c:80:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 6d0b2b2
+Sun Apr 10 21:05:31 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:100:5: error: expected expression before ‘}’ token
+     }
+     ^
+Compilation failed
+2aade1c
