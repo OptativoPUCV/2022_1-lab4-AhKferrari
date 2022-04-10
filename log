@@ -1066,3 +1066,8 @@ hashmap.c:80:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 590011c
+Sun Apr 10 21:11:34 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+a153208
