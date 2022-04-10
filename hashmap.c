@@ -80,10 +80,9 @@ HashMap * createMap(long capacity) {
 void eraseMap(HashMap * map,  char * key) {    
 
   int size;
-  
 
-  searchMap (map,key);
-  Pair->key  =NULL;
+  Pair = searchMap(map, key);
+  Pair->key = NULL;
   size--;
 }
 
