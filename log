@@ -762,3 +762,13 @@ hashmap.c:82:7: error: variable ‘pos’ set but not used [-Werror=unused-but-s
 cc1: all warnings being treated as errors
 Compilation failed
 b471af1
+Sun Apr 10 18:05:13 UTC 2022: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:86:7: error: expected identifier or ‘(’ before ‘->’ token
+   Pair->key=NULL;
+       ^~
+Compilation failed
+52d276b

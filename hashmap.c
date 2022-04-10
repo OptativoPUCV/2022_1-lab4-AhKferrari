@@ -79,11 +79,11 @@ HashMap * createMap(long capacity) {
 
 void eraseMap(HashMap * map,  char * key) {    
 
-  int pos;
+  
   
 
-  pos = searchMap (map,key);
-  pair->key=NULL;
+  searchMap (map,key);
+  Pair->key=NULL;
   
 }
 
