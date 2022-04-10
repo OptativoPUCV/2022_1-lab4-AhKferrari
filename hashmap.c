@@ -92,9 +92,13 @@ void eraseMap(HashMap * map,  char * key) {
       is_equal(map->buckets[pos]->key,key) == 0){
       pos = (pos+1)% map->capacity;
     }
-    map->size--;
-    map->buckets[pos]->key = NULL; 
-    
+    if (is_equal (map->buckets[pos]->key, key)){
+      map->size--;
+      map->buckets[pos]->key = NULL; 
+      }
+    else{
+      printf ("el dato no esta"); 
+    }
     }
 }
 
