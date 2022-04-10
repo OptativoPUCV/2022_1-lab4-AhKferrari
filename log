@@ -977,3 +977,15 @@ hashmap.c:86:6: error: invalid type argument of ‘->’ (have ‘Pair {aka stru
       ^~
 Compilation failed
 ba0db9d
+Sun Apr 10 20:06:38 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:86:6: error: dereferencing ‘void *’ pointer [-Werror]
+   par->key = NULL;
+      ^~
+hashmap.c:86:6: error: request for member ‘key’ in something not a structure or union
+cc1: all warnings being treated as errors
+Compilation failed
+74d93b7

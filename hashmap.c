@@ -79,7 +79,7 @@ HashMap * createMap(long capacity) {
 
 void eraseMap(HashMap * map,  char * key) {    
 
-  Pair par;
+  void * par;
 
   par = searchMap(map,key);
   map->size--;
