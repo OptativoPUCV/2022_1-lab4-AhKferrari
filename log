@@ -842,3 +842,21 @@ hashmap.c:85:15: error: expected expression before ‘=’ token
                ^
 Compilation failed
 c4fe8e6
+Sun Apr 10 18:11:01 UTC 2022: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:85:7: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+   pos = searchMap(map, key);
+       ^
+hashmap.c:86:15: error: ‘*map->buckets’ is a pointer; did you mean to use ‘->’?
+   map->buckets->key = NULL;
+               ^~
+               ->
+hashmap.c:82:7: error: variable ‘pos’ set but not used [-Werror=unused-but-set-variable]
+   int pos;
+       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+a52918f
