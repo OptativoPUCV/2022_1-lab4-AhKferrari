@@ -964,3 +964,16 @@ hashmap.c:102:1: error: expected identifier or ‘(’ before ‘}’ token
  ^
 Compilation failed
 b310482
+Sun Apr 10 20:06:02 UTC 2022: 
+ hashmap.c | 21 +++------------------
+ 1 file changed, 3 insertions(+), 18 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:84:7: error: incompatible types when assigning to type ‘Pair {aka struct Pair}’ from type ‘Pair * {aka struct Pair *}’
+   par = searchMap(map,key);
+       ^
+hashmap.c:86:6: error: invalid type argument of ‘->’ (have ‘Pair {aka struct Pair}’)
+   par->key = NULL;
+      ^~
+Compilation failed
+ba0db9d
