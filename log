@@ -1052,3 +1052,17 @@ hashmap.c:80:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 35415ae
+Sun Apr 10 21:11:28 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:100:14: error: ‘return’ with a value, in function returning void [-Werror]
+       return NULL ;
+              ^~~~
+hashmap.c:80:6: note: declared here
+ void eraseMap(HashMap * map,  char * key) {
+      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+590011c
