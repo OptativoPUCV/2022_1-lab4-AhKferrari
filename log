@@ -743,3 +743,22 @@ Sun Apr 10 17:53:50 UTC 2022:
  tests:  8|3
 total_score: 40/70
 9120c1d
+Sun Apr 10 17:57:55 UTC 2022: 
+ hashmap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:85:7: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+   pos = searchMap (map,key);
+       ^
+hashmap.c:86:3: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+   pair->key=NULL;
+   ^~~~
+   Pair
+hashmap.c:86:3: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:82:7: error: variable ‘pos’ set but not used [-Werror=unused-but-set-variable]
+   int pos;
+       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+b471af1
