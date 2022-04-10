@@ -656,3 +656,20 @@ hashmap.c:100:17: error: ‘*map->buckets’ is a pointer; did you mean to use �
 cc1: all warnings being treated as errors
 Compilation failed
 1dda5e6
+Sun Apr 10 17:31:48 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:92:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   if (is_equal (map->buckets[pos]->key, key))
+   ^~
+hashmap.c:94:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+     return map->buckets[pos];
+     ^~~~~~
+hashmap.c:96:3: error: ‘else’ without a previous ‘if’
+   else {
+   ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3293275
