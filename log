@@ -678,3 +678,18 @@ Sun Apr 10 17:32:15 UTC 2022:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 2e8d79d
+Sun Apr 10 17:33:24 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:93:17: error: ‘*map->buckets’ is a pointer; did you mean to use ‘->’?
+     map->buckets->current = pos;
+                 ^~
+                 ->
+hashmap.c:100:17: error: ‘*map->buckets’ is a pointer; did you mean to use ‘->’?
+     map->buckets->current = pos;
+                 ^~
+                 ->
+Compilation failed
+e2059c3
