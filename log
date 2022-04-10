@@ -874,3 +874,14 @@ hashmap.c:87:7: error: ‘size’ is used uninitialized in this function [-Werro
 cc1: all warnings being treated as errors
 Compilation failed
 393af7a
+Sun Apr 10 18:12:40 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:85:7: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+   pos = searchMap(map, key);
+       ^
+cc1: all warnings being treated as errors
+Compilation failed
+4ae2b38
