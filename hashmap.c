@@ -83,7 +83,7 @@ void eraseMap(HashMap * map,  char * key) {
   int size;
 
   pos = searchMap(map, key);
-  map->buckets->key = NULL;
+  map->buckets[pos]->key = NULL;
   size--;
 }
 
