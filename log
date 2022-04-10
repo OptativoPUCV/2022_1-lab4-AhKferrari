@@ -895,3 +895,12 @@ hashmap.c:84:8: error: expected identifier or ‘(’ before ‘=’ token
         ^
 Compilation failed
 6af4ad5
+Sun Apr 10 19:13:59 UTC 2022: 
+ hashmap.c | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c:102:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+Compilation failed
+2bb85b7
