@@ -81,8 +81,7 @@ void eraseMap(HashMap * map,  char * key) {
 
   int pos;
   
-
-  pos = searchMap(map, key);
+  Pair = searchMap(map, key);
   map->buckets[pos]->key = NULL;
   map->size--;
 }
