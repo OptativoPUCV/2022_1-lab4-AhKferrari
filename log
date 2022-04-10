@@ -673,3 +673,8 @@ hashmap.c:96:3: error: ‘else’ without a previous ‘if’
 cc1: all warnings being treated as errors
 Compilation failed
 3293275
+Sun Apr 10 17:32:15 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|0
+2e8d79d
