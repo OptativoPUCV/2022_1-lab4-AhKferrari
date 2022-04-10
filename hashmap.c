@@ -125,7 +125,7 @@ Pair * firstMap(HashMap * map) {
     pos = (pos+1)% map->capacity;  
   }
   map->current = pos;
-  return map->buckets[pos]; 
+  return map->buckets[pos]->value; 
   }
 
 Pair * nextMap(HashMap * map) {
