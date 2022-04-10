@@ -1215,3 +1215,15 @@ Sun Apr 10 23:47:32 UTC 2022:
  tests:  12|2
 total_score: 50/70
 3f6037d
+Sun Apr 10 23:48:53 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:122:14: error: ‘key’ undeclared (first use in this function); did you mean ‘key_t’?
+   pos = hash(key,map->capacity);
+              ^~~
+              key_t
+hashmap.c:122:14: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a58b356
