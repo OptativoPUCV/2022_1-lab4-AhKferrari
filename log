@@ -1115,3 +1115,18 @@ Sun Apr 10 21:57:10 UTC 2022:
  tests:  12|2
 total_score: 50/70
 277b4e7
+Sun Apr 10 22:14:01 UTC 2022: 
+ hashmap.c | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:134:23: error: ‘current’ undeclared (first use in this function)
+   return map->buckets[current+1];
+                       ^~~~~~~
+hashmap.c:134:23: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:135:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+511a0ac

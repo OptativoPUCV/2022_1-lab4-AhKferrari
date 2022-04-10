@@ -125,13 +125,11 @@ Pair * firstMap(HashMap * map) {
     pos = (pos+1)% map->capacity;  
   }
   return map->buckets[pos]; 
-
-  
-  
-    return NULL;
-}
+  }
 
 Pair * nextMap(HashMap * map) {
 
-    return NULL;
+    
+
+  return map->buckets[current+1];
 }
