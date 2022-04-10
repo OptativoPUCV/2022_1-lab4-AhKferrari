@@ -931,3 +931,19 @@ hashmap.c:102:1: error: expected identifier or ‘(’ before ‘}’ token
  ^
 Compilation failed
 2f4e741
+Sun Apr 10 20:03:25 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:88:5: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+     pair->key = NULL;
+     ^~~~
+     Pair
+hashmap.c:88:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c: At top level:
+hashmap.c:102:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+Compilation failed
+7c242f7
