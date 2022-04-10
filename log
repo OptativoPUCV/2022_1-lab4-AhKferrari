@@ -810,3 +810,19 @@ hashmap.c:85:7: error: expected identifier or ‘(’ before ‘->’ token
        ^~
 Compilation failed
 eb14c91
+Sun Apr 10 18:08:28 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:84:8: error: expected identifier or ‘(’ before ‘=’ token
+   Pair = searchMap(map, key);
+        ^
+hashmap.c:85:8: error: expected ‘)’ before ‘->’ token
+   (Pair->key = NULL);
+        ^~
+hashmap.c:85:21: error: expected expression before ‘;’ token
+   (Pair->key = NULL);
+                     ^
+Compilation failed
+8b149a3
