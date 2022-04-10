@@ -720,3 +720,14 @@ Sun Apr 10 17:46:57 UTC 2022:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 c5062f1
+Sun Apr 10 17:52:21 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:97:33: error: ‘Null’ undeclared (first use in this function)
+     while (map->buckets[pos] != Null && is_equal(map->buckets[pos]->key,             key) == 0){
+                                 ^~~~
+hashmap.c:97:33: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+340eda0
