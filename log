@@ -1657,3 +1657,22 @@ hashmap.c:63:18: error: ‘value’ undeclared (first use in this function)
                   ^~~~~
 Compilation failed
 8731267
+Mon Apr 11 01:17:33 UTC 2022: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:61:24: error: too few arguments to function ‘calloc’
+   Pair * aux = (Pair *)calloc(sizeof(Pair));
+                        ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:541:14: note: declared here
+ extern void *calloc (size_t __nmemb, size_t __size)
+              ^~~~~~
+In file included from test.c:4:0:
+hashmap.c:61:10: error: unused variable ‘aux’ [-Werror=unused-variable]
+   Pair * aux = (Pair *)calloc(sizeof(Pair));
+          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+b29133a

@@ -59,8 +59,7 @@ void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
   Pair * aux = (Pair *)calloc(sizeof(Pair));
-    aux->key = key;
-    aux->value = value;
+    
   
     
 
