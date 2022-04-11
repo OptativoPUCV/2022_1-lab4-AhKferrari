@@ -56,7 +56,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
-    enlarge_called = 1; //no borrar (testing purposes)
+    
   int cap2;
   int i;
   
@@ -71,7 +71,7 @@ void enlarge(HashMap * map) {
   for(i=0; i<map->capacity ; i++){
     insert(map, aux->key, aux->value);
   }
-  
+  enlarge_called = 1; //no borrar (testing purposes)
 }
 
 //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
