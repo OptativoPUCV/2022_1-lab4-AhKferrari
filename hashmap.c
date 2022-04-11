@@ -136,12 +136,9 @@ Pair * nextMap(HashMap * map) {
     pos = (pos+1)% map->capacity;
     
   }
-  if(map->buckets[pos]->key != NULL){
+  
     map->current = pos;
     return map->buckets[pos];
-  }
-  else{
-    return NULL;
-  }
+  
   
 }
