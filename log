@@ -1402,3 +1402,14 @@ hashmap.c:138:15: error: return makes pointer from integer without a cast [-Werr
 cc1: all warnings being treated as errors
 Compilation failed
 efc07b3
+Mon Apr 11 00:42:50 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:138:15: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+     return map->current;
+            ~~~^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+da3e044
