@@ -2347,3 +2347,26 @@ hashmap.c:61:7: error: unused variable ‘i’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 9611b2a
+Mon Apr 11 03:01:56 UTC 2022: 
+ hashmap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:66:24: error: too few arguments to function ‘calloc’
+   map->buckets=(Pair*) calloc (sizeof(Pair)*map->capacity);
+                        ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:541:14: note: declared here
+ extern void *calloc (size_t __nmemb, size_t __size)
+              ^~~~~~
+In file included from test.c:4:0:
+hashmap.c:70:9: error: ‘auxArreglo’ undeclared (first use in this function)
+     if (auxArreglo[i]!=NULL){
+         ^~~~~~~~~~
+hashmap.c:70:9: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:61:7: error: unused variable ‘i’ [-Werror=unused-variable]
+   int i;
+       ^
+cc1: all warnings being treated as errors
+Compilation failed
+a836d1c

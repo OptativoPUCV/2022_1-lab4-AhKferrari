@@ -61,20 +61,20 @@ void enlarge(HashMap * map) {
   int i;
   
   int cap2 = map->capacity;
-  Pair ** auxArreglo = map->buckets;
+  Pair ** aux = map->buckets;
   map -> capacity *= 2;
   map->buckets=(Pair*) calloc (sizeof(Pair)*map->capacity);
   map->size=0;
 
   for (int i=0; i < cap2; i++){
     if (auxArreglo[i]!=NULL){
-      insertMap(map,auxArreglo[i]->key,auxArreglo[i]->value);
+      insertMap(map,aux[i]->key,aux[i]->value);
     }
   }
-  free (auxArreglo);
+  free (aux);
 }
 
-//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
+
 
 HashMap * createMap(long capacity) {
 
