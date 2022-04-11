@@ -2127,3 +2127,57 @@ hashmap.c:61:10: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 ff307b0
+Mon Apr 11 02:36:57 UTC 2022: 
+ hashmap.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:60:7: error: expected identifier or ‘(’ before ‘=’ token
+   int = pos;
+       ^
+hashmap.c:62:3: error: expected ‘,’ or ‘;’ before ‘map’
+   map -> capacity *= 2;
+   ^~~
+hashmap.c:63:13: error: ‘map’ redeclared as different kind of symbol
+   HashMap** map = calloc(sizeof(HashMap*) * map->capacity);
+             ^~~
+hashmap.c:58:24: note: previous definition of ‘map’ was here
+ void enlarge(HashMap * map) {
+                        ^~~
+hashmap.c:63:48: error: ‘*map’ is a pointer; did you mean to use ‘->’?
+   HashMap** map = calloc(sizeof(HashMap*) * map->capacity);
+                                                ^~
+                                                ->
+hashmap.c:63:19: error: too few arguments to function ‘calloc’
+   HashMap** map = calloc(sizeof(HashMap*) * map->capacity);
+                   ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:541:14: note: declared here
+ extern void *calloc (size_t __nmemb, size_t __size)
+              ^~~~~~
+In file included from test.c:4:0:
+hashmap.c:64:6: error: ‘*map’ is a pointer; did you mean to use ‘->’?
+   map->buckets = malloc(sizeof(Pair*) * capacity);
+      ^~
+      ->
+hashmap.c:64:41: error: ‘capacity’ undeclared (first use in this function)
+   map->buckets = malloc(sizeof(Pair*) * capacity);
+                                         ^~~~~~~~
+hashmap.c:64:41: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:65:6: error: ‘*map’ is a pointer; did you mean to use ‘->’?
+   map->size = 0;
+      ^~
+      ->
+hashmap.c:66:6: error: ‘*map’ is a pointer; did you mean to use ‘->’?
+   map->current = -1
+      ^~
+      ->
+hashmap.c:67:3: error: expected ‘;’ before ‘while’
+   while(i<map->capacity){if(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL)
+   ^~~~~
+hashmap.c:61:10: error: unused variable ‘aux’ [-Werror=unused-variable]
+   Pair** aux = map->buckets
+          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+61c24b5
