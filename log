@@ -1359,3 +1359,23 @@ Mon Apr 11 00:22:46 UTC 2022:
  tests:  15|2
 total_score: 50/70
 2599077
+Mon Apr 11 00:28:24 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c:139:6: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   map->current = pos;
+      ^~
+hashmap.c:140:3: error: expected identifier or ‘(’ before ‘return’
+   return map->buckets[pos];
+   ^~~~~~
+hashmap.c:141:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+hashmap.c: In function ‘nextMap’:
+hashmap.c:138:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1: all warnings being treated as errors
+Compilation failed
+6fc2879
