@@ -1943,3 +1943,21 @@ In file included from test.c:2:0:
               ^~~~~~
 Compilation failed
 a93e0df
+Mon Apr 11 01:45:18 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:66:9: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+     *aux->buckets[i] = map->buckets[i];
+         ^~
+         ->
+hashmap.c:68:9: error: too few arguments to function ‘calloc’
+   map = calloc(sizeof(Pair*) * cap2);
+         ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:541:14: note: declared here
+ extern void *calloc (size_t __nmemb, size_t __size)
+              ^~~~~~
+Compilation failed
+e4992c5
