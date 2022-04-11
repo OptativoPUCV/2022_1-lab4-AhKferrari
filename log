@@ -1842,3 +1842,21 @@ hashmap.c:60:7: error: variable ‘cap2’ set but not used [-Werror=unused-but-
 cc1: all warnings being treated as errors
 Compilation failed
 9b6c854
+Mon Apr 11 01:43:07 UTC 2022: 
+ hashmap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:65:33: error: expected ‘)’ before ‘;’ token
+   for(i=0; i<map->capacity ; i++;){
+                                 ^
+hashmap.c:66:8: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+     aux->buckets[i] = map->buckets[i];
+        ^~
+        ->
+hashmap.c:60:7: error: variable ‘cap2’ set but not used [-Werror=unused-but-set-variable]
+   int cap2;
+       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+be57221
