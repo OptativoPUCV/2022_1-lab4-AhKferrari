@@ -120,8 +120,8 @@ Pair * firstMap(HashMap * map) {
 
   int pos = 0;
   
-  if (map->buckets[0] == NULL) return map->buckets[0];
-  while (map->buckets[pos] == NULL){
+  if (map->buckets[0] != NULL) return map->buckets[0];
+  while (map->buckets[pos] == NULL || map->buckets[pos]->ket == NULL){
     pos = (pos+1)% map->capacity;  
   }
   map->current = pos;
