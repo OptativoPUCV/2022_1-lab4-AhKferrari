@@ -1766,3 +1766,25 @@ hashmap.c:61:11: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 1fd6c51
+Mon Apr 11 01:32:58 UTC 2022: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:62:6: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+   aux->buckets = calloc(sizeof(Pair*) * capacity);
+      ^~
+      ->
+hashmap.c:62:41: error: ‘capacity’ undeclared (first use in this function)
+   aux->buckets = calloc(sizeof(Pair*) * capacity);
+                                         ^~~~~~~~
+hashmap.c:62:41: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:62:18: error: too few arguments to function ‘calloc’
+   aux->buckets = calloc(sizeof(Pair*) * capacity);
+                  ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:541:14: note: declared here
+ extern void *calloc (size_t __nmemb, size_t __size)
+              ^~~~~~
+Compilation failed
+b970328
