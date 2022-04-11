@@ -61,7 +61,6 @@ void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
   //////////////////////////////////////////// 
   
-  //Lo hice con lo que explico la clase, pro 
   int auxCapacidad = map->capacity;
   Pair ** auxArreglo = map->buckets;
   map -> capacity *= 2;
