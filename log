@@ -2067,3 +2067,31 @@ hashmap.c:61:10: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 947d70c
+Mon Apr 11 02:21:07 UTC 2022: 
+ hashmap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:62:3: error: expected ‘,’ or ‘;’ before ‘map’
+   map -> capacity *= 2;
+   ^~~
+hashmap.c:63:10: error: redefinition of ‘aux’
+   Pair** aux = calloc(sizeof(Pair*) * map->capacity);
+          ^~~
+hashmap.c:61:10: note: previous definition of ‘aux’ was here
+   Pair** aux = map->buckets
+          ^~~
+hashmap.c:63:16: error: too few arguments to function ‘calloc’
+   Pair** aux = calloc(sizeof(Pair*) * map->capacity);
+                ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:541:14: note: declared here
+ extern void *calloc (size_t __nmemb, size_t __size)
+              ^~~~~~
+In file included from test.c:4:0:
+hashmap.c:63:10: error: unused variable ‘aux’ [-Werror=unused-variable]
+   Pair** aux = calloc(sizeof(Pair*) * map->capacity);
+          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+2f896dd
