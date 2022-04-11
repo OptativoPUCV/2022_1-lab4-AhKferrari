@@ -1860,3 +1860,29 @@ hashmap.c:60:7: error: variable ‘cap2’ set but not used [-Werror=unused-but-
 cc1: all warnings being treated as errors
 Compilation failed
 be57221
+Mon Apr 11 01:44:09 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:65:33: error: expected ‘)’ before ‘;’ token
+   for(i=0; i<map->capacity ; i++;){
+                                 ^
+hashmap.c:66:8: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+     aux->buckets[i] = map->buckets[i];
+        ^~
+        ->
+hashmap.c:68:3: error: ‘mapa’ undeclared (first use in this function); did you mean ‘map’?
+   mapa->buckets = calloc(sizeof(Pair*) * cap2);
+   ^~~~
+   map
+hashmap.c:68:3: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:68:19: error: too few arguments to function ‘calloc’
+   mapa->buckets = calloc(sizeof(Pair*) * cap2);
+                   ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:541:14: note: declared here
+ extern void *calloc (size_t __nmemb, size_t __size)
+              ^~~~~~
+Compilation failed
+3bd6db3
