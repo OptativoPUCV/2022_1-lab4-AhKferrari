@@ -1747,3 +1747,22 @@ hashmap.c:61:11: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 1dccbb4
+Mon Apr 11 01:31:55 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:61:17: error: too few arguments to function ‘calloc’
+   Pair ** aux = calloc(sizeof(Pair*));
+                 ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:541:14: note: declared here
+ extern void *calloc (size_t __nmemb, size_t __size)
+              ^~~~~~
+In file included from test.c:4:0:
+hashmap.c:61:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   Pair ** aux = calloc(sizeof(Pair*));
+           ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+1fd6c51
