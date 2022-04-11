@@ -60,6 +60,7 @@ void enlarge(HashMap * map) {
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
   //////////////////////////////////////////// 
+  int i;
   
   int auxCapacidad = map->capacity;
   Pair ** auxArreglo = map->buckets;
