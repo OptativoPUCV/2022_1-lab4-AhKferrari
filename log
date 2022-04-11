@@ -2025,3 +2025,9 @@ hashmap.c:72:30: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
 cc1: all warnings being treated as errors
 Compilation failed
 ca76b8d
+Mon Apr 11 02:02:26 UTC 2022: 
+ hashmap.c | 13 -------------
+ 1 file changed, 13 deletions(-)
+ tests:  16|1
+total_score: 60/70
+8806e6b
