@@ -2036,3 +2036,20 @@ Mon Apr 11 02:07:32 UTC 2022:
  1 file changed, 1 insertion(+)
  tests:  0|0
 3a22c5d
+Mon Apr 11 02:11:30 UTC 2022: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:62:3: error: expected ‘,’ or ‘;’ before ‘map’
+   map -> capacity *= 2;
+   ^~~
+hashmap.c:61:10: error: unused variable ‘aux’ [-Werror=unused-variable]
+   Pair** aux = map->buckets
+          ^~~
+hashmap.c:60:7: error: unused variable ‘i’ [-Werror=unused-variable]
+   int i = 0;
+       ^
+cc1: all warnings being treated as errors
+Compilation failed
+b1a728a
