@@ -57,8 +57,10 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
-
+  int cap2;
+  
   Pair ** aux = malloc(sizeof(Pair*)* map->capacity);
+  
   
   
     
