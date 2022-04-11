@@ -60,6 +60,7 @@ void enlarge(HashMap * map) {
   int cap2;
   
   Pair ** aux = malloc(sizeof(Pair*)* map->capacity);
+  cap2 = map->capacity * 2;
   
   
   

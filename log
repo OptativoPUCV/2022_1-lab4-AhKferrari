@@ -1828,3 +1828,17 @@ hashmap.c:60:7: error: unused variable ‘cap2’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 5e1fca7
+Mon Apr 11 01:38:53 UTC 2022: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:62:11: error: unused variable ‘aux’ [-Werror=unused-variable]
+   Pair ** aux = malloc(sizeof(Pair*)* map->capacity);
+           ^~~
+hashmap.c:60:7: error: variable ‘cap2’ set but not used [-Werror=unused-but-set-variable]
+   int cap2;
+       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9b6c854
