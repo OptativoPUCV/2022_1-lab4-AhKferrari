@@ -1436,3 +1436,9 @@ hashmap.c:138:15: error: return makes pointer from integer without a cast [-Werr
 cc1: all warnings being treated as errors
 Compilation failed
 0efee1e
+Mon Apr 11 00:44:07 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  15|2
+total_score: 50/70
+59db364
