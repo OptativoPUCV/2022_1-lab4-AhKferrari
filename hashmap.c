@@ -60,13 +60,13 @@ void enlarge(HashMap * map) {
   //////////////////////////////////////////// 
   int i;
   
-  int auxCapacidad = map->capacity;
+  int cap2 = map->capacity;
   Pair ** auxArreglo = map->buckets;
   map -> capacity *= 2;
   map->buckets=(Pair*) calloc (sizeof(Pair)*map->capacity);
   map->size=0;
 
-  for (int i=0; i < auxCapacidad; i++){
+  for (int i=0; i < cap2; i++){
     if (auxArreglo[i]!=NULL){
       insertMap(map,auxArreglo[i]->key,auxArreglo[i]->value);
     }
