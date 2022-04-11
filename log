@@ -1961,3 +1961,35 @@ In file included from test.c:2:0:
               ^~~~~~
 Compilation failed
 e4992c5
+Mon Apr 11 01:47:59 UTC 2022: 
+ hashmap.c | 12 +++++-------
+ 1 file changed, 5 insertions(+), 7 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:66:8: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+     aux->buckets[i] = map->buckets[i];
+        ^~
+        ->
+hashmap.c:68:9: error: too few arguments to function ‘calloc’
+   map = calloc(sizeof(Pair*) * cap2);
+         ^~~~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:541:14: note: declared here
+ extern void *calloc (size_t __nmemb, size_t __size)
+              ^~~~~~
+In file included from test.c:4:0:
+hashmap.c:72:5: error: implicit declaration of function ‘insert’; did you mean ‘insertMap’? [-Werror=implicit-function-declaration]
+     insert(map, aux->key, aux->value);
+     ^~~~~~
+     insertMap
+hashmap.c:72:20: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+     insert(map, aux->key, aux->value);
+                    ^~
+                    ->
+hashmap.c:72:30: error: ‘*aux’ is a pointer; did you mean to use ‘->’?
+     insert(map, aux->key, aux->value);
+                              ^~
+                              ->
+cc1: all warnings being treated as errors
+Compilation failed
+3c9336b
