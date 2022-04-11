@@ -137,9 +137,8 @@ Pair * nextMap(HashMap * map) {
     pos = (pos+1)% map->capacity;
     
   }
-    
     map->current = pos;
-  if (map->current == map->capacity) return NULL;
+    if (map->current == map->capacity-1) return NULL;
     return map->buckets[pos];
   
   
