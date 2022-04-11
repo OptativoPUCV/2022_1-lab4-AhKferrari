@@ -1347,3 +1347,9 @@ hashmap.c:124:58: error: ‘Pair {aka struct Pair}’ has no member named ‘ket
                                                           key
 Compilation failed
 22d0a21
+Mon Apr 11 00:21:45 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  12|2
+total_score: 50/70
+2734b6b
