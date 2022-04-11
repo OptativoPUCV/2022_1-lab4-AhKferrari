@@ -137,6 +137,6 @@ Pair * nextMap(HashMap * map) {
     
     return map->buckets[pos];
   }
-  
+  map->current = pos;
   return map->buckets[pos];
 }
